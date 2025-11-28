@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Dashboard de Vendas",
+    "descricao": "Análise de performance de vendas de uma empresa, com KPIs de faturamento, ticket médio e produtos mais vendidos.",
+    "link": "https://link-para-seu-dashboard.com/vendas",
+    "imagem": "assets/projetos/dashboard-vendas.png"
+  },
+  {
+    "titulo": "Análise de RH",
+    "descricao": "Dashboard interativo para análise de turnover, satisfação de funcionários e demografia da empresa.",
+    "link": "https://link-para-seu-dashboard.com/rh",
+    "imagem": "assets/projetos/dashboard-rh.png"
+  }
+]

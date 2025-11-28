@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Web Scraper de Notícias",
+    "descricao": "Script em Python que utiliza as bibliotecas BeautifulSoup e Requests para extrair as manchetes de um portal de notícias.",
+    "link": "https://github.com/seu-usuario/projeto-web-scraper-noticias",
+    "imagem": "assets/projetos/web-scraper.png"
+  },
+  {
+    "titulo": "API REST com Flask",
+    "descricao": "Uma API simples para um sistema de blog, permitindo criar, ler, atualizar e deletar postagens.",
+    "link": "https://github.com/seu-usuario/projeto-api-flask-blog",
+    "imagem": "assets/projetos/api-flask.png"
+  }
+]

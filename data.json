@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Projetos JavaScript",
+    "descricao": "Aqui estarão meus projetos focados em desenvolvimento front-end, utilizando HTML, CSS e JavaScript para criar interfaces dinâmicas e responsivas.",
+    "link": "projetos.html?categoria=JavaScript",
+    "imagem": "assets/javascript-icon.png"
+  },
+  {
+    "titulo": "Dashboards com Power BI",
+    "descricao": "Projetos de Business Intelligence onde transformo dados brutos em insights valiosos através de dashboards interativos no Power BI.",
+    "link": "projetos.html?categoria=powerbi",
+    "imagem": "assets/powerbi-icon.png"
+  },
+  {
+    "titulo": "Projetos Python",
+    "descricao": "Aplicações em python",
+    "link": "projetos.html?categoria=python",
+    "imagem": "assets/python-icon.png"
+  },
+  {
+    "titulo": "Projetos Front-End",
+    "descricao": "Aplicações em Front-End",
+    "link": "projetos.html?categoria=frontend",
+    "imagem": "assets/frontend-icon.png"
+  }
+]

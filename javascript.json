@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Amigo Secreto",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para simular um sorteio dos nomes do Amigo Secreto",
+    "link": "https://klaudius1012.github.io/Amigo-Secreto/",
+    "imagem": "assets/projetos/amigo-secreto.png"
+  },
+  {
+    "titulo": "Carrinho de Comras",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para simular um carrinho de compras interativo",
+    "link": "https://klaudius1012.github.io/carrinho-de-compras/",
+    "imagem": "assets/projetos/carrinho-de-compras.png"
+  },
+  {
+    "titulo": "Aluga Games",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para simular locação e devolução de jogos",
+    "link": "https://klaudius1012.github.io/Aluga-games/",
+    "imagem": "assets/projetos/alugajogos.png"
+  },
+ {
+    "titulo": "Venda de Ingressos",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para simular uma venda de ingressos descontando do número máximo",
+    "link": "https://klaudius1012.github.io/ingresso/",
+    "imagem": "assets/projetos/ingresso.png"
+  },
+  {
+    "titulo": "Numero Secreto",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para sortear um numero entre 1 e 50 com a voz do google",
+    "link": "https://klaudius1012.github.io/numero-secreto/",
+    "imagem": "assets/projetos/jogo-num-secreto.png"
+  },
+  {
+    "titulo": "Sorteador de números",
+    "descricao": "Um sistema desenvolvido em HTML, CSS e JavaScript para sortear um numero que o usuário selecionar e a quantidade de numeros sorteados",
+    "link": "https://klaudius1012.github.io/sorteador-de-numeros/",
+    "imagem": "assets/projetos/sorteador-de-numeros.png"
+  }
+]
