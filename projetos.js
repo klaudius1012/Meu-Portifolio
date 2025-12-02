@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 frontend: {
                     titulo: "Projetos Front-End",
-                    arquivo: "frontend.json"
+                   arquivo: "frontend.json"
                 }
     
             };
@@ -82,4 +82,5 @@ async function carregarProjetos(arquivoJson) {
     }
 
 }
+
 
