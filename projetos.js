@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mapeia a categoria da URL para um título e um nome de arquivo JSON
             const categoriasInfo = {
                 JavaScript: {
-                    titulo: "Projetos Alura / Pessoais com JavaScript",
+                    titulo: "Projetos com JavaScript",
                     arquivo: "javascript.json"
                 },
                 powerbi: {
@@ -82,5 +82,6 @@ async function carregarProjetos(arquivoJson) {
     }
 
 }
+
 
 
