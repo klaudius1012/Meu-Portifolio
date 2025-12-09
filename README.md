@@ -1,4 +1,4 @@
-a<h1>Meu Portifólio.</h1>
+<h1>Meu Portifólio.</h1>
 
 <h2> &#128203 Sobre</h2>
 <p>Aqui estão todos os projetos pessoais, ou de exercícios desenvolvidos!</p>
