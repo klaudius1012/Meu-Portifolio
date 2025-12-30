@@ -4,7 +4,20 @@
     "descricao": "Uma página Responsiva que se adapta para Tablets e Celulares de propaganda de celulares",
     "link": "https://klaudius1012.github.io/Techboard/",
     "imagem": "assets/projetos/techboard.png"
+  },
+  {
+    "titulo": "Petshop",
+    "descricao": "Uma lanepage responsiva de uma petshop simples",
+    "link": "https://klaudius1012.github.io/petshop/",
+    "imagem": "assets/projetos/petshop.png"
+  },
+  {
+    "titulo": "Engenharia-Consultoria",
+    "descricao": "Uma lanepage responsiva voltada para uma empresa de engenharia",
+    "link": "https://klaudius1012.github.io/Consultoria-Engenharia/",
+    "imagem": "assets/projetos/engenharia.png"
   }
 
 ]
+
 
