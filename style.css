@@ -1,285 +1,343 @@
-/* Importa a fonte Montserrat do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Define variáveis de cores para facilitar a manutenção */
+/* --- Configurações Globais --- */
 :root {
-    --primary-color: #8ab4f8; /* Cor primária (azul claro) */
-    --secondary-color: #e8eaed; /* Cor secundária (cinza claro) */
-    --tertiary-color: #9aa0a6; /* Cor terciária (cinza médio) */
-    --bg-color: #202124; /* Cor de fundo (cinza escuro) */
+  /* Cores do Modo Claro (Padrão) */
+  --bg-body: #f9f9f9;
+  --bg-card: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #7f8c8d;
+  --primary-color: #2c3e50; /* Títulos e Botões */
+  --primary-hover: #34495e;
+  --border-color: #e0e0e0;
+  --btn-text: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --shadow-hover-color: rgba(0, 0, 0, 0.15);
 }
 
-/* Reset básico e configurações globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+body.dark-mode {
+  /* Cores do Modo Escuro */
+  --bg-body: #121212;
+  --bg-card: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b3b8;
+  --primary-color: #64b5f6; /* Azul mais claro para contraste no escuro */
+  --primary-hover: #42a5f5;
+  --border-color: #333333;
+  --btn-text: #121212; /* Texto escuro no botão claro */
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-hover-color: rgba(0, 0, 0, 0.6);
 }
 
 body {
-    margin: 0; /* Remove a margem padrão do body */
-    background: var(--bg-color); /* Define a cor de fundo usando uma variável */
-    color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Montserrat", sans-serif; /* Define a família da fonte */
-    line-height: 1.6;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estrutura principal e espaçamento */
-header, main, footer {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
+/* --- Estilização do Cabeçalho --- */
 header {
-    padding: 2rem 1rem; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados) */
-    display: flex; /* Habilita o layout flexbox */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
-    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
-    top: 0; /* Posição do topo quando sticky */
-    background: var(--bg-color); /* Cor de fundo do cabeçalho */
-    z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
-    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior */
-    gap: 1rem; /* Espaçamento entre os elementos flex */
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  gap: 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2rem 10%;
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    font-weight: 500; /* Peso da fonte (médio) */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
+  margin: 0;
+  color: var(--primary-color);
 }
 
 header p {
-    color: var(--tertiary-color);
-    font-size: 1.1rem;
-    
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
 }
 
-section {
-    text-align: center; /* Centraliza o texto dentro da seção */
-    margin-bottom: 2.5rem;
+/* --- Barra de Busca --- */
+.caixa-busca {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin: 0 auto 1.5rem auto; /* Centraliza o h2 e mantém a margem inferior */
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    text-align: left; /* Garante que o texto dentro do h2 (se houver quebra de linha) fique alinhado à esquerda */
+#campoBusca {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+#campoBusca:focus {
+  border-color: var(--primary-color);
 }
 
-h4 {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    font-weight: 300;
+#botaoBusca {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilos para o campo de busca e botão */
-.busca-container {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 2.5rem;
+#botaoBusca:hover {
+  background-color: var(--primary-hover);
 }
 
-input[type="text"] {
-    padding: 0.375rem 0.75rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    border: 1px solid var(--tertiary-color); /* Define a borda */
-    background: var(--bg-color); /* Cor de fundo */
-    font-family: inherit; /* Herda a família da fonte do elemento pai */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
-    width: 20rem; /* Largura do input */
-    color: var(--secondary-color); /* Cor do texto digitado */
-    margin-right: .5rem; /* Margem à direita */
+/* --- Botão de Tema (Dark Mode) --- */
+/* Estilo do Switch (Botão Deslizante) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-input[type="text"]::placeholder {
-    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
-    font-weight: 300; /* Peso da fonte do placeholder */
-    color: var(--tertiary-color); /* Cor do texto do placeholder */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-input[type="text"]:focus {
-    outline: none; /* Remove a borda de foco padrão */
-    border-color: var(--bg-color); /* Muda a cor da borda ao focar */
-    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: 0.4s;
+  border-radius: 34px;
+  width: 60px;
 }
 
-.botao-transparente {
-    padding: 0.4rem 0.4rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    /* Adições para alinhar o ícone e o texto */
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem; /* Espaço entre o ícone e o texto */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
-    font-family: inherit; /* Herda a família da fonte */
-    font-weight: 300; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
-    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
-    background-color: transparent; /* Cor de fundo transparente */
-    color: var(--secondary-color); /* Cor do texto */
-/*  border: 1px solid var(--tertiary-color);  Adiciona uma borda */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
-/* Ajusta o tamanho do ícone para combinar com o texto */
-.botao-transparente .material-icons {
-    font-size: 1.2rem;
+input:checked + .slider {
+  background-color: var(--primary-color);
 }
 
-.botao-transparente:hover {
-    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
-    color: var(--bg-color); /* Muda a cor do texto ao passar o mouse */
-    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra de caixa */
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
-.botao-transparente:active {
-    transform: scale(0.98); /* Efeito de clique (diminui o tamanho) */
+p {
+  margin: 0 200px 0;
 }
 
-/* Container para os projetos em grid */
-.projetos-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+.andamento {
+  align-items: center;
+  text-align: center;
+}
+/* --- Estilização do Portfólio --- */
+
+/* Container principal que alinha os projetos */
+.portfolio-grid {
+  display: grid;
+  /* Cria duas colunas de largura igual */
+  grid-template-columns: repeat(2, 1fr);
+  /* Define o espaçamento entre os cards */
+  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 40px auto; /* Centraliza a grade na página */
 }
 
-/* Estilo dos cards de projeto na página de projetos.html */
-.projeto-card {
-    background-color: #1a1a1a; /* Cor de fundo escura */
-    border: 1px solid #3c4043; /* Borda sutil */
-    border-radius: 8px; /* Bordas arredondadas */
-    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Faz o card ocupar toda a altura disponível no grid */
-    transition: transform 0.3s ease, border-color 0.3s ease;
+/* Estilo individual de cada card de projeto */
+.project-card {
+  background-color: var(--bg-card);
+  border-radius: 16px; /* Bordas mais arredondadas */
+  box-shadow: 0 4px 12px var(--shadow-color);
+  overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+    background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.projeto-card:hover {
-    transform: scale(1.03);
-    border-color: var(--primary-color);
+/* Efeito de hover para dar interatividade ao card */
+.project-card:hover {
+  transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+  box-shadow: 0 12px 24px var(--shadow-hover-color);
 }
 
-.projeto-card .projeto-imagem {
-    width: 100%;
-    height: 180px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+/* Efeito de zoom na imagem ao passar o mouse no card */
+.project-card:hover img {
+  transform: scale(1.1);
 }
 
-.projeto-card .projeto-info {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Faz esta área crescer para preencher o espaço restante */
+/* Classe para esconder o card com animação */
+.project-card.invisivel {
+  opacity: 0;
+  transform: scale(0.9); /* Diminui levemente ao sumir */
+  pointer-events: none; /* Impede cliques enquanto desaparece */
 }
 
-.projeto-card .projeto-info p {
-    margin-top: 0.5rem;
-    color: var(--tertiary-color); /* Cor mais suave para a descrição */
+/* Estilização da imagem do projeto */
+.project-card img {
+  width: 100%;
+  height: 240px; /* Altura fixa para um visual uniforme */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Estilo dos cards de projeto */
-.categoria-projeto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center;
-    background-color: #1a1a1a; /* Cor de fundo solicitada */
-    padding: 1rem; /* Reduz o padding para dar mais espaço à imagem */
-    border-radius: 8px;
-    border: 1px solid #3c4043;
-    min-height: 275px; /* Define uma altura mínima para os cards */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    position: relative; /* Necessário para posicionar a imagem de fundo */
-    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+/* Container para o conteúdo de texto (título e descrição) */
+.project-info {
+  /* O padding cria o espaço interno abaixo da imagem */
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.categoria-projeto .projeto-imagem {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir todo o espaço */
-    z-index: 0; /* Coloca a imagem atrás do conteúdo */
+/* Estilização do título H3 */
+.project-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
 }
 
-/* Estilo dos botões e links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
+/* Estilização do parágrafo P */
+.project-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Espaçamento entre os parágrafos de descrição e tecnologias */
+.project-info p + p {
+  margin-top: 0.75rem;
+}
+
+/* --- Estilo do Botão "Ver Projeto" --- */
+.project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem; /* Garante um espaço acima do botão */
+  background-color: var(--primary-color);
+  color: var(--btn-text);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: var(--primary-hover);
+}
+
+/* --- Mensagem de "Nenhum projeto encontrado" --- */
+#mensagem-sem-projetos {
+  grid-column: 1 / -1; /* Faz o elemento ocupar todas as colunas da grid */
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  display: none; /* Começa oculto */
+  padding: 2rem;
+  transition: color 0.3s ease;
+}
+
+/* --- Estilização do Rodapé --- */
+footer {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 -2px 10px var(--shadow-color);
+  margin-top: 4rem; /* Espaço para separar do conteúdo acima */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer p {
+  margin: 0;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--secondary-color);
+  color: var(--primary-hover);
 }
 
-/* Remove a cor do link para os cards de projeto, herdando a cor do texto */
-.categoria-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-.categoria-link:hover .categoria-projeto {
-    transform: scale(1.03);
-    border-color: var(--primary-color);
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    border-top: 1px solid #3c4043;
-    padding-top: 2rem;
-    color: var(--tertiary-color);
-}
-
-/* Responsividade para telas menores */
+/* --- Responsividade para Telas Menores (Mobile) --- */
 @media (max-width: 768px) {
-    header { /* Estilos para telas com largura máxima de 768px */
-        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
-        padding: 1rem; /* Reduz o espaçamento interno */
-    }
+  .portfolio-grid {
+    /* Em telas menores, os cards ficam em uma única coluna */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
 
-    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 1rem; /* Adiciona margem inferior */
-    }
+  header {
+    padding: 1rem;
+  }
 
-    input[type="text"] { /* Estilos para o input em telas menores */
-        width: 90vw; /* Largura baseada na largura da viewport */
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-    /* Em telas menores, os projetos ficam em uma única coluna */
-    .projetos-container {
-        grid-template-columns: 1fr;
-    }
+  p {
+    margin: 0 100px 0;
+  }
 }
 
-@media (max-width: 480px) {
-    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-        max-width: 70%; /* Define uma largura máxima */
-        word-wrap: break-word; /* Permite a quebra de palavras longas */
-    }
+/* --- Responsividade para Telas Maiores (Desktop) --- */
+@media (width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem 10%;
+  }
+}
+
+@media (width: 430px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem 10%;
+  }
+
+  p {
+    margin: 0 50px 0;
+  }
 }

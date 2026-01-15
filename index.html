@@ -1,46 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Portfólio Profissional</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div>
-            <h1>Claudio Vargas Seabra</h1>
-            <p>Desenvolvedor de Software</p>
-            <p>Python | css | JavaScript | HTML | JSON</p>
-        </div>
-        <div class="caixa-busca">
-            <input type="text" id="campoBusca" placeholder="Buscar por título ou tecnologia...">
-            <button id="botaoBusca" class="botao-transparente">BUSCAR</button>
-        </div>
+      <div>
+        <h1>Claudio Vargas Seabra</h1>
+        <p>Desenvolvedor de Software</p>
+        <p>Python | css | JavaScript | HTML | JSON</p>
+      </div>
+      <div class="caixa-busca">
+        <input
+          type="text"
+          id="campoBusca"
+          placeholder="Buscar por título ou tecnologia..."
+        />
+        <button id="botaoBusca" class="botao-transparente">BUSCAR</button>
+        <label class="switch">
+          <input type="checkbox" id="toggleTema" />
+          <span class="slider"></span>
+        </label>
+      </div>
     </header>
 
     <main>
-        <section id="sobre-mim">
-            <h2>Sobre Mim</h2>
-            <p>Atuo como Desenvolvedor Front-end em nível Júnior, desenvolvendo interfaces web com HTML, CSS e JavaScript, com foco em usabilidade, organização de código e integração com sistemas existentes. Trabalho na criação de páginas, formulários e componentes reutilizáveis, aplicando boas práticas de desenvolvimento e versionamento.
-            <br> <Br>
-            Minha experiência em infraestrutura me permite desenvolver soluções com visão de arquitetura, segurança e desempenho, unindo desenvolvimento de interfaces modernas à realidade de ambientes produtivos. Busco evolução contínua no Front-end, com objetivo de avançar para Back-end e, futuramente, atuar com Inteligência Artificial.</p>
-        </section>
+      <section id="sobre-mim">
+        <h2>Sobre Mim</h2>
+        <p>
+          Atuo como Desenvolvedor Front-end em nível Júnior, desenvolvendo
+          interfaces web com HTML, CSS e JavaScript, com foco em usabilidade,
+          organização de código e integração com sistemas existentes. Trabalho
+          na criação de páginas, formulários e componentes reutilizáveis,
+          aplicando boas práticas de desenvolvimento e versionamento. <br />
+          <br />
+          Minha experiência em infraestrutura me permite desenvolver soluções
+          com visão de arquitetura, segurança e desempenho, unindo
+          desenvolvimento de interfaces modernas à realidade de ambientes
+          produtivos. Busco evolução contínua no Front-end, com objetivo de
+          avançar para Back-end e, futuramente, atuar com Inteligência
+          Artificial.
+        </p>
+      </section>
 
-        <section id="projetos">
-            <h2>Meus Projetos</h2>
+      <section id="projetos">
+        <h2>Meus Projetos</h2>
 
-            <div class="projetos-container">
-                <!-- O conteúdo dos projetos será carregado aqui via JavaScript -->
+        <!-- A classe foi alterada para corresponder ao CSS e a estrutura interna foi refeita -->
+        <div class="portfolio-grid">
+          <!-- Card do Projeto 1 -->
+          <div class="project-card">
+            <img
+              src="assets/engenharia.png"
+              alt="Imagem do Projeto Consultoria & Engenharia"
+            />
+            <div class="project-info">
+              <div>
+                <h3>Consultoria & Engenharia</h3>
+                <p>
+                  Uma landing Page referente a uma empresa de Engenharia que
+                  presta consultoria.
+                </p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+              </div>
+              <a
+                href="https://klaudius1012.github.io/Consultoria-Engenharia/"
+                target="_blank"
+                class="project-link"
+                >Ver Projeto</a
+              >
             </div>
-        </section>
+          </div>
+          <!-- Card do Projeto 2 -->
+          <div class="project-card">
+            <img src="assets/petshop.png" alt="Imagem do Projeto Pet Shop" />
+            <div class="project-info">
+              <div>
+                <h3>Pet Shop</h3>
+                <p>Uma landing Page simples referente a uma petshop.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+              </div>
+              <a
+                href="https://klaudius1012.github.io/petshop/"
+                target="_blank"
+                class="project-link"
+                >Ver Projeto</a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <section id="em-andamento">
+            <h2 class="andamento">Em Andamento</h2>
+          </section>
+          <div class="portfolio-grid">
+            <!-- Card do Projeto 3 -->
+            <div class="project-card">
+              <img src="assets/petclin.png" alt="Imagem do Projeto PetClin" />
+              <div class="project-info">
+                <div>
+                  <h3>Pet Clin</h3>
+                  <p>
+                    Uma Projeto particular em andamento, via front end, o
+                    sistema agenda consultas, cadastra tutor e seus pets emite
+                    uma prescrição simples, aferições, evoluções e solicita
+                    exames.<br /><br />
+                    Projeto com o backend em desenvolvimento.
+                  </p>
+                  <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                </div>
+                <a
+                  href="https://klaudius1012.github.io/petclin_html/"
+                  target="_blank"
+                  class="project-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mensagem caso nenhum projeto seja encontrado -->
+        <p id="mensagem-sem-projetos">Nenhum projeto encontrado.</p>
+      </section>
     </main>
 
     <footer>
-        <p>Contato: dev.claudiovargas@gmail.com | <a href="https://www.linkedin.com/in/claudio-vargas-seabra/" target="_blank">LinkedIn</a> | <a href="https://github.com/klaudius1012" target="_blank">GitHub</a></p>
+      <p>
+        Contato: dev.claudiovargas@gmail.com |
+        <a
+          href="https://www.linkedin.com/in/claudio-vargas-seabra/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        | <a href="https://github.com/klaudius1012" target="_blank">GitHub</a>
+      </p>
     </footer>
-
-  
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
